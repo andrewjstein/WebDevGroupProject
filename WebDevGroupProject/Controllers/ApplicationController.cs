@@ -93,7 +93,12 @@ namespace WebDevGroupProject.Controllers
         {
             var ethnicorigin = new List<EthnicOrigin>()
             {
-                new EthnicOrigin() {EthnicOriginID = 1, Description = "Caucasian"},
+                new EthnicOrigin() {EthnicOriginID = 1, Description = "American Indian or Alaska Native"},
+                new EthnicOrigin() {EthnicOriginID = 2, Description = "Asian"},
+                new EthnicOrigin() {EthnicOriginID = 3, Description = "Black or African American"},
+                new EthnicOrigin() {EthnicOriginID = 4, Description = "Middle Eastern"},
+                new EthnicOrigin() {EthnicOriginID = 5, Description = "Native Hawaiian or Other Pacific"},
+                new EthnicOrigin() {EthnicOriginID = 6, Description = "White"},
             };
             var viewModel = new ApplicantViewModel();
             viewModel.EthnicOrigin = new SelectList(ethnicorigin, "EthnicOriginID", "Description");
@@ -109,7 +114,20 @@ namespace WebDevGroupProject.Controllers
         [HttpGet]
         public IActionResult EnrollmentPreferences()
         {
+            var studenttype = new List<StudentType>()
+            {
+                new StudentType() {StudentTypeID = 1, Description = "Full Time"},
+                new StudentType() {StudentTypeID = 2, Description = "Part Time"}
+            };
+            var residentialstatus = new List<ResidentialStatus>()
+            {
+                new ResidentialStatus() {ResidentialStatusID = 1, Description = "Resident"},
+                new ResidentialStatus() {ResidentialStatusID = 2, Description = "Commuter"}
+            };
             var viewModel = new EnrollmentPreferencesViewModel();
+            viewModel.StudentType = new SelectList(studenttype, "StudentTypeID", "Description");
+            viewModel.ResidentialStatus = new SelectList(residentialstatus, "ResidentialStatusID", "Description");
+
             return View(viewModel);
         }
 

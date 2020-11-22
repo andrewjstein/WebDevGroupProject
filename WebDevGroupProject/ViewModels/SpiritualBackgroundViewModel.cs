@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebDevGroupProject.ViewModels
 {
-    public class SpiritualBackground
+    public class SpiritualBackgroundViewModel
     {
         // Spiritual Background 
         [Required]

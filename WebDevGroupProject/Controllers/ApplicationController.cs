@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebDevGroupProject.ViewModels;
 
 namespace WebDevGroupProject.Controllers
-{
+{//test
     public class ApplicationController : Controller
     {
         public IActionResult Index()

@@ -52,5 +52,29 @@ namespace WebDevGroupProject.Controllers
         {
             return RedirectToAction("Reports"); 
         }
+        [HttpGet]
+        public IActionResult Relationships()
+        {
+            var viewModel = new RelationshipsViewModel();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Relationships(RelationshipsViewModel viewModel)
+        {
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult Billing()
+        {
+            var viewModel = new BillingViewModel();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Billing(BillingViewModel viewModel)
+        {
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -1,0 +1,91 @@
+﻿@model WebDevGroupProject.ViewModels.ApplicantViewModel
+
+@{
+    ViewData["Title"] = "Applicant";
+}
+
+<h1>Applicant</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Applicant">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="ApplicantID" class="control-label"></label>
+                <input asp-for="ApplicantID" class="form-control" />
+                <span asp-validation-for="ApplicantID" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="ApplicantFirstName" class="control-label"></label>
+                <input asp-for="ApplicantFirstName" class="form-control" />
+                <span asp-validation-for="ApplicantFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantLastName" class="control-label"></label>
+                <input asp-for="ApplicantLastName" class="form-control" />
+                <span asp-validation-for="ApplicantLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantMiddleInitial" class="control-label"></label>
+                <input asp-for="ApplicantMiddleInitial" class="form-control" />
+                <span asp-validation-for="ApplicantMiddleInitial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantStreetAddress" class="control-label"></label>
+                <input asp-for="ApplicantStreetAddress" class="form-control" />
+                <span asp-validation-for="ApplicantStreetAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantCity" class="control-label"></label>
+                <input asp-for="ApplicantCity" class="form-control" />
+                <span asp-validation-for="ApplicantCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantCountry" class="control-label"></label>
+                <input asp-for="ApplicantCountry" class="form-control" />
+                <span asp-validation-for="ApplicantCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantZip" class="control-label"></label>
+                <input asp-for="ApplicantZip" class="form-control" />
+                <span asp-validation-for="ApplicantZip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantPhone" class="control-label"></label>
+                <input asp-for="ApplicantPhone" class="form-control" />
+                <span asp-validation-for="ApplicantPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantEmail" class="control-label"></label>
+                <input asp-for="ApplicantEmail" class="form-control" />
+                <span asp-validation-for="ApplicantEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantBirthDate" class="control-label"></label>
+                <input asp-for="ApplicantBirthDate" class="form-control" />
+                <span asp-validation-for="ApplicantBirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicantPrimaryCitizenship" class="control-label"></label>
+                <input asp-for="ApplicantPrimaryCitizenship" class="form-control" />
+                <span asp-validation-for="ApplicantPrimaryCitizenship" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HispanicLatino" /> @Html.DisplayNameFor(model => model.HispanicLatino)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

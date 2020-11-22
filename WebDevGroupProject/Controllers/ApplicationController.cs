@@ -147,5 +147,31 @@ namespace WebDevGroupProject.Controllers
         {
             return RedirectToAction("Reports");
         }
+
+        [HttpGet]
+        public IActionResult AcademicRecord()
+        {
+            var viewModel = new AcademicRecordViewModel();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult AcademicRecord(ReferenceViewModel viewModel)
+        {
+            return RedirectToAction("Index");
+        }
+        //[HttpGet]
+        //public IActionResult SpiritualBackgournd()
+        //{
+        //    var viewModel = new ReferenceViewModel();
+        //    return View(viewModel);
+        //}
+
+        //[HttpPost]
+        //public IActionResult SpirtualBackgorund(ReferenceViewModel viewModel)
+        //{
+        //    return RedirectToAction("Index");
+        //}
+
     }
 }

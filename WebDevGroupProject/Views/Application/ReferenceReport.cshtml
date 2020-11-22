@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WebDevGroupProject.ViewModels.ReferenceReportViewModel>
+
+@{
+    ViewData["Title"] = "ReferenceReport";
+}
+
+<h1>Applicant Reference Report</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicantID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicantFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicantLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceRelationship)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceEmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferencePhoneNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicantID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicantFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicantLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceRelationship)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceEmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferencePhoneNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

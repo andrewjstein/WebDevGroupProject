@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using WebDevGroupProject.Models;
 using WebDevGroupProject.ViewModels;
 
 namespace WebDevGroupProject.Controllers
@@ -84,7 +86,13 @@ namespace WebDevGroupProject.Controllers
         [HttpGet]
         public IActionResult Applicant()
         {
+            var ethnicorigin = new List<EthnicOrigin>()
+            {
+                new EthnicOrigin() {EthnicOriginID = 1, Description = "Caucasian"},
+            };
             var viewModel = new ApplicantViewModel();
+            viewModel.EthnicOrigin = new SelectList(ethnicorigin, "EthnicOriginID", "Description");
+
             return View(viewModel);
         }
 

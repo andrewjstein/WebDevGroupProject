@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -45,9 +46,10 @@ namespace WebDevGroupProject.ViewModels
         [Required]
         [Display(Name = "Primary Citizensip")]
         public string ApplicantPrimaryCitizenship { get; set; }
+        public EthnicOrigin EthnicOriginID { get; set; }
         [Required]
         [Display(Name = "Ethnic Origin")]
-        public EthnicOrigin EthnicOrigin { get; set; }
+        public SelectList EthnicOrigin { get; set; }
         [Required]
         [Display(Name = "Hispanic or Latino?")]
         public bool HispanicLatino { get; set; }

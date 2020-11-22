@@ -8,7 +8,6 @@ namespace WebDevGroupProject.Models
     public class EthnicOrigin
     {
         public int EthnicOriginID { get; set; }
-
         public string Description { get; set; }
     }
 }

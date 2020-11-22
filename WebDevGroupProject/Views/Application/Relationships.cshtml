@@ -12,7 +12,7 @@
     <div class="col-md-4">
         <form asp-action="Relationships">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="list-group-item">
+            <div class="list-group">
                 <label asp-for="Guardians" class="control-label"></label>
                 <input asp-for="Guardians" class="form-control" />
                 <span asp-validation-for="Guardians" class="text-danger"></span>
@@ -22,10 +22,12 @@
                 <input asp-for="Siblings" class="form-control" />
                 <span asp-validation-for="Siblings" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Guardians" class="control-label"></label>
-                <input asp-for="Guardians" class="form-control" />
-                <span asp-validation-for="Guardians" class="text-danger"></span>
+            <div>
+                <label asp-for="FamilyRole" class="control-label"></label>
+                <span asp-validation-for="FamilyRole" class="text-danger"></span>
+                <select asp-for="FamilyRoleID" asp-items="Model.FamilyRole">
+                    <option value="">--Select an Answer--</option>
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

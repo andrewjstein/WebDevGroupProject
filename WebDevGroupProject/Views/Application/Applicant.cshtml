@@ -11,10 +11,10 @@
         <form asp-action="Applicant">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             @*<div class="form-group">
-                <label asp-for="ApplicantID" class="control-label"></label>
-                <input asp-for="ApplicantID" class="form-control" />
-                <span asp-validation-for="ApplicantID" class="text-danger"></span>
-            </div>*@
+            <label asp-for="ApplicantID" class="control-label"></label>
+            <input asp-for="ApplicantID" class="form-control" />
+            <span asp-validation-for="ApplicantID" class="text-danger"></span>
+        </div>*@
             <div class="form-group">
                 <label asp-for="ApplicantFirstName" class="control-label"></label>
                 <input asp-for="ApplicantFirstName" class="form-control" />
@@ -69,6 +69,13 @@
                 <label asp-for="ApplicantPrimaryCitizenship" class="control-label"></label>
                 <input asp-for="ApplicantPrimaryCitizenship" class="form-control" />
                 <span asp-validation-for="ApplicantPrimaryCitizenship" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="EthnicOrigin" class="control-label"></label>
+                <span asp-validation-for="EthnicOrigin" class="text-danger"></span>
+                <select asp-for="EthnicOriginID" asp-items="Model.EthnicOrigin">
+                    <option value="">--Select an Answer--</option>
+                </select>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">

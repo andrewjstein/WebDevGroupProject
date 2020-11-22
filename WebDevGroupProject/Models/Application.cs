@@ -25,8 +25,8 @@ namespace WebDevGroupProject.Models
         // Enrollment Preferences 
         public string PreferredMajor { get; set; }
         public string PreferredMinor { get; set; }
-        public string CommuterResident { get; set; }
-        public string FullTimePartTime { get; set; }
+        //public string CommuterResident { get; set; }
+        //public string FullTimePartTime { get; set; }
         public bool InterestedInHonors { get; set; }
         public StudentType StudentType { get; set; }
         public ResidentialStatus ResidentialStatus { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +14,8 @@ namespace WebDevGroupProject.ViewModels
         public List<Guardian> Guardians { get; set; }
         [Required]
         public List<Sibling> Siblings { get; set; }
+        public FamilyRole FamilyRoleID { get; set; }
         [Required]
-        public FamilyRole FamilyRole { get; set; }
+        public SelectList FamilyRole { get; set; }
     }
 }

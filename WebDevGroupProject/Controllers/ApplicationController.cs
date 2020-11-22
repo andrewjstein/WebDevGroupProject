@@ -24,7 +24,7 @@ namespace WebDevGroupProject.Controllers
         [HttpPost]
         public IActionResult Reference(ReferenceViewModel viewModel)
         {
-            return RedirectToAction("Index"); 
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -44,13 +44,37 @@ namespace WebDevGroupProject.Controllers
         public IActionResult ReferenceReport()
         {
             var viewModel = new List<ReferenceReportViewModel>();
-            return View(viewModel); 
+            return View(viewModel);
         }
 
         [HttpPost]
         public IActionResult ReferenceReport(ReferenceReportViewModel viewModel)
         {
-            return RedirectToAction("Reports"); 
+            return RedirectToAction("Reports");
+        }
+        [HttpGet]
+        public IActionResult Relationships()
+        {
+            var viewModel = new RelationshipsViewModel();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Relationships(RelationshipsViewModel viewModel)
+        {
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult Billing()
+        {
+            var viewModel = new BillingViewModel();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Billing(BillingViewModel viewModel)
+        {
+            return RedirectToAction("Index");
         }
     }
 }

@@ -62,7 +62,12 @@ namespace WebDevGroupProject.Controllers
         [HttpGet]
         public IActionResult Relationships()
         {
+            var role = new List<FamilyRole>()
+            {
+                new FamilyRole() {RoleID = 1, RoleName = "None"},
+            };
             var viewModel = new RelationshipsViewModel();
+            viewModel.FamilyRole = new SelectList(role, "FamilyRoleID", "RoleName");
             return View(viewModel);
         }
 

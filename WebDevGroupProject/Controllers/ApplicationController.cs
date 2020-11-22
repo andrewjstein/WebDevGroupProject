@@ -156,7 +156,7 @@ namespace WebDevGroupProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult AcademicRecord(ReferenceViewModel viewModel)
+        public IActionResult AcademicRecord(AcademicRecordViewModel viewModel)
         {
             return RedirectToAction("Index");
         }

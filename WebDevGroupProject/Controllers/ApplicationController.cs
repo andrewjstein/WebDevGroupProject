@@ -52,43 +52,29 @@ namespace WebDevGroupProject.Controllers
         {
             return RedirectToAction("Reports"); 
         }
-
-
         [HttpGet]
-        public IActionResult Applicant()
+        public IActionResult Relationships()
         {
-            var viewModel = new ApplicantViewModel();
+            var viewModel = new RelationshipsViewModel();
             return View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult Applicant(ApplicantViewModel viewModel)
+        public IActionResult Relationships(RelationshipsViewModel viewModel)
         {
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public IActionResult EnrollmentPreferences()
+        public IActionResult Billing()
         {
-            var viewModel = new EnrollmentPreferencesViewModel();
+            var viewModel = new BillingViewModel();
             return View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult EnrollmentPreferences(EnrollmentPreferencesViewModel viewModel)
+        public IActionResult Billing(BillingViewModel viewModel)
         {
             return RedirectToAction("Index");
-        }
-        [HttpGet]
-        public IActionResult HonorsEligibleReport()
-        {
-            var viewModel = new List<HonorsEligibleReportViewModel>();
-            return View(viewModel);
-        }
-
-        [HttpPost]
-        public IActionResult HonorsEligibleReport(HonorsEligibleReportViewModel viewModel)
-        {
-            return RedirectToAction("Reports");
         }
     }
 }

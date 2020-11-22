@@ -26,5 +26,18 @@ namespace WebDevGroupProject.Controllers
         {
             return RedirectToAction("Index"); 
         }
+
+        [HttpGet]
+        public IActionResult HealthRecord()
+        {
+            var viewModel = new HealthRecordViewModel();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult HealthRecord(HealthRecordViewModel viewModel)
+        {
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -56,6 +56,7 @@ namespace WebDevGroupProject.Models
         public string InsuranceCardBackPath { get; set; }
         public string ImmunizationFilePath { get; set; }
         public string PhysicianName { get; set; }
+        public string PracticeName { get; set; }
         public string PracticePhoneNumber { get; set; }
         public string ContactFirstName { get; set; }
         public string ContactLastName { get; set; }

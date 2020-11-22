@@ -8,7 +8,6 @@ namespace WebDevGroupProject.Models
     public class Application
     {
         public int ApplicationID { get; set; }
-
         public DateTime ApplicationDate { get; set; }
 
         // Personal Information 
@@ -63,6 +62,13 @@ namespace WebDevGroupProject.Models
         public string ContactEmailAddress { get; set; }
         public string ContactPhoneNumber { get; set; }
         public string ContactRelationship { get; set; }
+
+        // Reference
+        public string ReferenceFirstName { get; set; }
+        public string ReferenceLastName { get; set; }
+        public string ReferenceRelationship { get; set; }
+        public string ReferenceEmailAddress { get; set; }
+        public string ReferencePhoneNumber { get; set; }
 
         // Billing
         public int CreditCardNumber { get; set; }

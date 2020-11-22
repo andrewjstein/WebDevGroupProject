@@ -1,0 +1,53 @@
+﻿@model WebDevGroupProject.ViewModels.ReferenceViewModel
+
+@{
+    ViewData["Title"] = "Reference";
+}
+
+<h1>Reference</h1>
+
+<h4>ReferenceViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Reference">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ReferenceFirstName" class="control-label"></label>
+                <input asp-for="ReferenceFirstName" class="form-control" />
+                <span asp-validation-for="ReferenceFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReferenceLastName" class="control-label"></label>
+                <input asp-for="ReferenceLastName" class="form-control" />
+                <span asp-validation-for="ReferenceLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReferenceRelationship" class="control-label"></label>
+                <input asp-for="ReferenceRelationship" class="form-control" />
+                <span asp-validation-for="ReferenceRelationship" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReferenceEmailAddress" class="control-label"></label>
+                <input asp-for="ReferenceEmailAddress" class="form-control" />
+                <span asp-validation-for="ReferenceEmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReferencePhoneNumber" class="control-label"></label>
+                <input asp-for="ReferencePhoneNumber" class="form-control" />
+                <span asp-validation-for="ReferencePhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -14,6 +14,11 @@ namespace WebDevGroupProject.Controllers
             return View();
         }
 
+        public IActionResult Reports()
+        {
+            return View(); 
+        }
+
         [HttpGet]
         public IActionResult Reference()
         {

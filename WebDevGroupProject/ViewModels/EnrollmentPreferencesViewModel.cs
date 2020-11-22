@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,7 +24,9 @@ namespace WebDevGroupProject.ViewModels
         [Required]
         [Display(Name = "Interested in honors?")]
         public bool InterestedInHonors { get; set; }
-        public StudentType StudentType { get; set; }
-        public ResidentialStatus ResidentialStatus { get; set; }
+        public StudentType StudentTypeID { get; set; }
+        public ResidentialStatus ResidentialStatusID { get; set; }
+        public SelectList StudentType { get; set; }
+        public SelectList ResidentialStatus { get; set; }
     }
 }

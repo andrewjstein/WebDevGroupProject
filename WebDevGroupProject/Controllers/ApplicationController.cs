@@ -161,16 +161,23 @@ namespace WebDevGroupProject.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public IActionResult SpiritualBackgournd()
+        public IActionResult SpiritualBackground()
         {
             var viewModel = new SpiritualBackgroundViewModel();
             return View(viewModel);
         }
 
-        [HttpPost]
-        public IActionResult SpiritualBackground(SpiritualBackgroundViewModel viewModel)
+        [HttpGet]
+        public IActionResult ScholarshipEligibilityReport()
         {
-            return RedirectToAction("Index");
+            var viewModel = new List<ScholarshipEligibilityReportViewModel>();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult ScholarshipEligibilityReport(ScholarshipEligibilityReportViewModel viewModel)
+        {
+            return RedirectToAction("Reports");
         }
 
     }

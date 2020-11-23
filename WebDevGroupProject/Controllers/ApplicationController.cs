@@ -188,7 +188,7 @@ namespace WebDevGroupProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult SortedApplicantsReportReport(SortedApplicantsReportViewModel viewModel)
+        public IActionResult SortedApplicantsReport(SortedApplicantsReportViewModel viewModel)
         {
             return RedirectToAction("Reports");
         }

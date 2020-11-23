@@ -10,7 +10,6 @@ namespace WebDevGroupProject.ViewModels
 {
     public class ApplicantViewModel
     {
-        [Key] //Necessary??
         public int ApplicantID { get; set; }
         [Required]
         [Display(Name = "First Name")]

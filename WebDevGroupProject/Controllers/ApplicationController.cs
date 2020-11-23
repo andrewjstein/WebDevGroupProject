@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -176,6 +177,18 @@ namespace WebDevGroupProject.Controllers
 
         [HttpPost]
         public IActionResult ScholarshipEligibilityReport(ScholarshipEligibilityReportViewModel viewModel)
+        {
+            return RedirectToAction("Reports");
+        }
+        [HttpGet]
+        public IActionResult SortedApplicantsReport()
+        {
+            var viewModel = new List<SortedApplicantsReportViewModel>();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult SortedApplicantsReportReport(SortedApplicantsReportViewModel viewModel)
         {
             return RedirectToAction("Reports");
         }

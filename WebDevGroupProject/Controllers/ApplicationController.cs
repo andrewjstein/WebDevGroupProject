@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WebDevGroupProject.Models;
 using WebDevGroupProject.ViewModels;
+
 
 namespace WebDevGroupProject.Controllers
 {
@@ -161,17 +163,35 @@ namespace WebDevGroupProject.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public IActionResult SpiritualBackgournd()
+        public IActionResult SpiritualBackground()
         {
             var viewModel = new SpiritualBackgroundViewModel();
             return View(viewModel);
         }
 
-        [HttpPost]
-        public IActionResult SpiritualBackground(SpiritualBackgroundViewModel viewModel)
+        [HttpGet]
+        public IActionResult ScholarshipEligibilityReport()
         {
-            return RedirectToAction("Index");
+            var viewModel = new List<ScholarshipEligibilityReportViewModel>();
+            return View(viewModel);
         }
 
+        [HttpPost]
+        public IActionResult ScholarshipEligibilityReport(ScholarshipEligibilityReportViewModel viewModel)
+        {
+            return RedirectToAction("Reports");
+        }
+        [HttpGet]
+        public IActionResult SortedApplicantsReport()
+        {
+            var viewModel = new List<SortedApplicantsReportViewModel>();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult SortedApplicantsReport(SortedApplicantsReportViewModel viewModel)
+        {
+            return RedirectToAction("Reports");
+        }
     }
 }

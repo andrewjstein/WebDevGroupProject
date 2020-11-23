@@ -1,0 +1,317 @@
+﻿@model IEnumerable<WebDevGroupProject.Models.Application>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HighSchoolName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEEBCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GPA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SAT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ACT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HighSchoolTranscriptPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PreferredMajor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PreferredMinor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestedInHonors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChurchName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChurchAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChurchCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChurchState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChurchZip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PastorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PastorEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfessionOfFaith)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpiritualJourney)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolicyHolder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProviderName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemberID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolicyGroupNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InsuranceCardFrontPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InsuranceCardBackPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImmunizationFilePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhysicianName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracticeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracticePhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactEmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactRelationship)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceRelationship)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceEmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferencePhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditCardNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingExpiration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingCVV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingZip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Signature)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighSchoolName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEEBCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GPA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SAT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ACT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighSchoolTranscriptPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreferredMajor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreferredMinor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestedInHonors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChurchName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChurchAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChurchCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChurchState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChurchZip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PastorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PastorEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfessionOfFaith)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpiritualJourney)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyHolder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProviderName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MemberID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyGroupNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsuranceCardFrontPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsuranceCardBackPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImmunizationFilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicianName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracticeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracticePhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactEmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactRelationship)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceRelationship)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceEmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferencePhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreditCardNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillingExpiration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillingCVV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillingName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillingAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillingCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillingState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillingZip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Signature)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ApplicationID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ApplicationID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ApplicationID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

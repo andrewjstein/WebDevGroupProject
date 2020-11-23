@@ -7,7 +7,7 @@ namespace WebDevGroupProject.Models
 {
     public class FamilyRole
     {
-        public int RoleID { get; set; }
+        public int FamilyRoleID { get; set; }
         public string RoleName { get; set; }
     }
 }

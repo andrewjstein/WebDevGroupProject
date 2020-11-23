@@ -64,7 +64,7 @@ namespace WebDevGroupProject.Controllers
         {
             var role = new List<FamilyRole>()
             {
-                new FamilyRole() {RoleID = 1, RoleName = "None"},
+                new FamilyRole() {FamilyRoleID = 1, RoleName = "None"},
             };
             var viewModel = new RelationshipsViewModel();
             viewModel.FamilyRole = new SelectList(role, "FamilyRoleID", "RoleName");

@@ -160,18 +160,18 @@ namespace WebDevGroupProject.Controllers
         {
             return RedirectToAction("Index");
         }
-        //[HttpGet]
-        //public IActionResult SpiritualBackgournd()
-        //{
-        //    var viewModel = new ReferenceViewModel();
-        //    return View(viewModel);
-        //}
+        [HttpGet]
+        public IActionResult SpiritualBackgournd()
+        {
+            var viewModel = new SpiritualBackgroundViewModel();
+            return View(viewModel);
+        }
 
-        //[HttpPost]
-        //public IActionResult SpirtualBackgorund(ReferenceViewModel viewModel)
-        //{
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost]
+        public IActionResult SpiritualBackground(SpiritualBackgroundViewModel viewModel)
+        {
+            return RedirectToAction("Index");
+        }
 
     }
 }

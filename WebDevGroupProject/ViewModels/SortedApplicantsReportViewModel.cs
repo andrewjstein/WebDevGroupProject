@@ -10,8 +10,8 @@ namespace WebDevGroupProject.ViewModels
     {
         [Key]
         public int ApplicantID { get; set; }
-        public string ApplicantFirstName { get; set; }
-        public string ApplicantLastName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public double GPA { get; set; }
     }
 }

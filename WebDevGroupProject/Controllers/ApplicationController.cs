@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using WebDevGroupProject.Models;
 using WebDevGroupProject.ViewModels;
 
+
 namespace WebDevGroupProject.Controllers
 {
     public class ApplicationController : Controller
@@ -192,6 +193,5 @@ namespace WebDevGroupProject.Controllers
         {
             return RedirectToAction("Reports");
         }
-
     }
 }

@@ -13,16 +13,24 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantID)
+                <sortable-link asp-action="SortedApplicantsReport" query-options="ViewBag.QueryOptions" sort-field="ApplicantID">
+                    @Html.DisplayNameFor(model => model.ApplicantID)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantFirstName)
+                <sortable-link asp-action="SortedApplicantsReport" query-options="ViewBag.QueryOptions" sort-field="FirstName">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantLastName)
+                <sortable-link asp-action="SortedApplicantsReport" query-options="ViewBag.QueryOptions" sort-field="LastName">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GPA)
+                <sortable-link asp-action="SortedApplicantsReport" query-options="ViewBag.QueryOptions" sort-field="GPA">
+                    @Html.DisplayNameFor(model => model.GPA)
+                </sortable-link>
             </th>
             <th></th>
         </tr>
@@ -34,10 +42,10 @@
                 @Html.DisplayFor(modelItem => item.ApplicantID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ApplicantFirstName)
+                @Html.DisplayFor(modelItem => item.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ApplicantLastName)
+                @Html.DisplayFor(modelItem => item.LastName)
             <td>
                 @Html.DisplayFor(modelItem => item.GPA)
             </td>

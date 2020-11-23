@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OrderTracker.ViewModels
+namespace WebDevGroupProject.ViewModels
 {
     public enum SortOrder
     {

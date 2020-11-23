@@ -7,7 +7,7 @@ using WebDevGroupProject.Models;
 
 namespace WebDevGroupProject.ViewModels
 {
-    public class AcademicRecord
+    public class AcademicRecordViewModel
     {
         // Academic Record
         [Required]

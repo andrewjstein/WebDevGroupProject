@@ -11,9 +11,9 @@ namespace WebDevGroupProject.ViewModels
     public class RelationshipsViewModel
     {
         [Required]
-        public List<Guardian> Guardians { get; set; }
+        public string Guardians { get; set; }
         [Required]
-        public List<Sibling> Siblings { get; set; }
+        public string Siblings { get; set; }
         public FamilyRole FamilyRoleID { get; set; }
         [Required]
         public SelectList FamilyRole { get; set; }

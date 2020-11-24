@@ -161,7 +161,8 @@ namespace WebDevGroupProject.Controllers
                     SortOrder = SortOrder.ASC
                 };
             }
-            var viewModel = from items in _context.Application
+            ViewBag.QueryOptions = queryOptions;
+            var viewModel = from items in _context.Application.Include(o => o.Applicant)
                             select new SortedApplicantsReportViewModel
                             {
                                 ApplicantID = items.Applicant.ApplicantID,
@@ -169,7 +170,6 @@ namespace WebDevGroupProject.Controllers
                                 LastName = items.Applicant.ApplicantLastName,
                                 GPA = items.GPA
                             };
-            ViewBag.QueryOptions = queryOptions;
             return View(await viewModel.OrderBy(queryOptions.Sort).ToListAsync());
         }
     }

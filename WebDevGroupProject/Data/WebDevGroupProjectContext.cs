@@ -15,5 +15,7 @@ namespace WebDevGroupProject.Data
         }
 
         public DbSet<WebDevGroupProject.Models.Application> Application { get; set; }
+        public DbSet<WebDevGroupProject.Models.Applicant> Applicant { get; set; }
+        public DbSet<WebDevGroupProject.ViewModels.SortedApplicantsReportViewModel> SortedApplicantsReport { get; set; }
     }
 }

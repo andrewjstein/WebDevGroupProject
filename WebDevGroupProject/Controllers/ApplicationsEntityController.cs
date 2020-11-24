@@ -283,5 +283,33 @@ namespace WebDevGroupProject.Controllers
             return View(await viewModel.OrderBy(queryOptions.Sort).ToListAsync());
 
         }
+
+        public async Task<IActionResult> ReferenceReport(QueryOptions queryOptions)
+        {
+            if (queryOptions == null || string.IsNullOrWhiteSpace(queryOptions.SortField))
+            {
+                queryOptions = new QueryOptions
+                {
+                    SortField = "ApplicantLastName",
+                    SortOrder = SortOrder.ASC
+                };
+            }
+            ViewBag.QueryOptions = queryOptions;
+            var viewModel = from reference in _context.Application.Include(o => o.Applicant)
+                            select new ReferenceReportViewModel
+                            {
+                                ApplicantID = reference.ApplicationID,
+                                ApplicantFirstName = reference.Applicant.ApplicantFirstName,
+                                ApplicantLastName = reference.Applicant.ApplicantLastName,
+                                ReferenceFirstName = reference.ReferenceFirstName,
+                                ReferenceLastName = reference.ReferenceLastName,
+                                ReferenceRelationship = reference.ReferenceRelationship,
+                                ReferenceEmailAddress = reference.ReferenceEmailAddress,
+                                ReferencePhoneNumber = reference.ReferencePhoneNumber
+                            };
+            return View(await viewModel.OrderBy(queryOptions.Sort).ToListAsync());
+        }
+
+
     }
 }

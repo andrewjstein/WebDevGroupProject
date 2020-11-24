@@ -48,7 +48,7 @@ namespace WebDevGroupProject.Controllers
         // GET: ApplicationsEntity/Create
         public IActionResult Create()
         {
-            var viewModel = new ApplicationViewModel(); 
+            var viewModel = new ApplicationViewModel();
             return View(viewModel);
         }
 
@@ -70,7 +70,7 @@ namespace WebDevGroupProject.Controllers
                 ApplicantEmail = viewModel.Applicant.ApplicantEmail,
                 ApplicantBirthDate = viewModel.Applicant.ApplicantBirthDate,
                 ApplicantPrimaryCitizenship = viewModel.Applicant.ApplicantPrimaryCitizenship,
-                EthnicOrigin = viewModel.Applicant.EthnicOrigin, 
+                EthnicOrigin = viewModel.Applicant.EthnicOrigin,
                 HispanicLatino = viewModel.Applicant.HispanicLatino,
 
             };
@@ -141,10 +141,10 @@ namespace WebDevGroupProject.Controllers
 
             //if (ModelState.IsValid)
             //{
-                _context.Add(applicant);
-                _context.Add(application);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+            _context.Add(applicant);
+            _context.Add(application);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
             //}
             //return View(viewModel);
         }
@@ -256,5 +256,60 @@ namespace WebDevGroupProject.Controllers
                             };
             return View(await viewModel.OrderBy(queryOptions.Sort).ToListAsync());
         }
+        public async Task<IActionResult> HonorsReport(QueryOptions queryOptions)
+        {
+            if (queryOptions == null || string.IsNullOrWhiteSpace(queryOptions.SortField))
+            {
+                queryOptions = new QueryOptions
+                {
+                    SortField = "InterestedInHonors",
+                    SortOrder = SortOrder.ASC
+                };
+            }
+            ViewBag.QueryOptions = queryOptions;
+            var viewModel = from items in _context.Application.Include(o => o.Applicant)
+                            select new HonorsEligibleReportViewModel
+                            {
+                                ApplicantID = items.Applicant.ApplicantID,
+                                ApplicantFirstName = items.Applicant.ApplicantFirstName,
+                                ApplicantLastName = items.Applicant.ApplicantLastName,
+                                GPA = items.GPA,
+                                SAT = items.SAT,
+                                ACT = items.ACT,
+                                ApplicantEmail = items.Applicant.ApplicantEmail,
+                                ApplicantPhone = items.Applicant.ApplicantPhone,
+                                InterestedInHonors = items.InterestedInHonors,
+                            };
+            return View(await viewModel.OrderBy(queryOptions.Sort).ToListAsync());
+
+        }
+
+        public async Task<IActionResult> ReferenceReport(QueryOptions queryOptions)
+        {
+            if (queryOptions == null || string.IsNullOrWhiteSpace(queryOptions.SortField))
+            {
+                queryOptions = new QueryOptions
+                {
+                    SortField = "ApplicantLastName",
+                    SortOrder = SortOrder.ASC
+                };
+            }
+            ViewBag.QueryOptions = queryOptions;
+            var viewModel = from reference in _context.Application.Include(o => o.Applicant)
+                            select new ReferenceReportViewModel
+                            {
+                                ApplicantID = reference.ApplicationID,
+                                ApplicantFirstName = reference.Applicant.ApplicantFirstName,
+                                ApplicantLastName = reference.Applicant.ApplicantLastName,
+                                ReferenceFirstName = reference.ReferenceFirstName,
+                                ReferenceLastName = reference.ReferenceLastName,
+                                ReferenceRelationship = reference.ReferenceRelationship,
+                                ReferenceEmailAddress = reference.ReferenceEmailAddress,
+                                ReferencePhoneNumber = reference.ReferencePhoneNumber
+                            };
+            return View(await viewModel.OrderBy(queryOptions.Sort).ToListAsync());
+        }
+
+
     }
 }

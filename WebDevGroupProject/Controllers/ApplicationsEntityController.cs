@@ -60,7 +60,7 @@ namespace WebDevGroupProject.Controllers
             Reference = viewModel.Reference;
             var application = new Application()
             {
-                Reference = viewModel.Reference, 
+                Reference = viewModel.Reference,
 
             }
 

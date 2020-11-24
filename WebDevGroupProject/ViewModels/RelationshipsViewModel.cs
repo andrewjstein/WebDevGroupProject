@@ -17,6 +17,7 @@ namespace WebDevGroupProject.ViewModels
         [Display(Name = "Sibling Names (Separated by Comma)")]
         public string Siblings { get; set; }
         [Required]
+        [Display(Name="If a family member has been a part of the military or ministry, please type their role below. If none type \"NA\".")]
         public string FamilyRole { get; set; }
     }
 }

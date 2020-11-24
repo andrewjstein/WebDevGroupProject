@@ -139,14 +139,14 @@ namespace WebDevGroupProject.Controllers
             };
 
 
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 _context.Add(applicant);
                 _context.Add(application);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
-            return View(application);
+            //}
+            //return View(viewModel);
         }
 
 

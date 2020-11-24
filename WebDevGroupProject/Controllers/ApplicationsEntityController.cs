@@ -125,7 +125,7 @@ namespace WebDevGroupProject.Controllers
 
 
                 CreditCardNumber = viewModel.Billing.CreditCardNumber,
-                // BillingExpiration = viewModel.Billing.BillingExpiration, 
+                BillingExpiration = viewModel.Billing.BillingExpiration, 
                 BillingCVV = viewModel.Billing.BillingCVV,
                 BillingName = viewModel.Billing.BillingName,
                 BillingAddress = viewModel.Billing.BillingAddress,

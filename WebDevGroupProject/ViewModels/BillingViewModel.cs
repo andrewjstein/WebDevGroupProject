@@ -8,6 +8,7 @@ namespace WebDevGroupProject.ViewModels
 {
     public class BillingViewModel
     {
+        [Key]
         [Required]
         [CreditCard]
         [Display(Name = "Credit Card Number")]

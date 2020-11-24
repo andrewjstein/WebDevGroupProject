@@ -137,16 +137,10 @@ namespace WebDevGroupProject.Controllers
                 Applicant = applicant
 
             };
-
-
-            //if (ModelState.IsValid)
-            //{
             _context.Add(applicant);
             _context.Add(application);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-            //}
-            //return View(viewModel);
         }
 
 

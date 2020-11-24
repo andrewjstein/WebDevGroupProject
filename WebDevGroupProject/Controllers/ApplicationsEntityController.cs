@@ -53,12 +53,18 @@ namespace WebDevGroupProject.Controllers
         }
 
         // POST: ApplicationsEntity/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ApplicationID,ApplicationDate,HighSchoolName,CEEBCode,GPA,SAT,ACT,HighSchoolTranscriptPath,PreferredMajor,PreferredMinor,InterestedInHonors,ChurchName,ChurchAddress,ChurchCity,ChurchState,ChurchZip,PastorName,PastorEmail,ProfessionOfFaith,SpiritualJourney,PolicyHolder,ProviderName,MemberID,PolicyGroupNumber,InsuranceCardFrontPath,InsuranceCardBackPath,ImmunizationFilePath,PhysicianName,PracticeName,PracticePhoneNumber,ContactFirstName,ContactLastName,ContactEmailAddress,ContactPhoneNumber,ContactRelationship,ReferenceFirstName,ReferenceLastName,ReferenceRelationship,ReferenceEmailAddress,ReferencePhoneNumber,CreditCardNumber,BillingExpiration,BillingCVV,BillingName,BillingAddress,BillingCity,BillingState,BillingZip,Signature")] Application application)
+        public async Task<IActionResult> Create(ApplicationViewModel viewModel)
         {
+            Reference = viewModel.Reference;
+            var application = new Application()
+            {
+                Reference = viewModel.Reference, 
+
+            }
+
+
             if (ModelState.IsValid)
             {
                 _context.Add(application);
@@ -85,11 +91,10 @@ namespace WebDevGroupProject.Controllers
         }
 
         // POST: ApplicationsEntity/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ApplicationID,ApplicationDate,HighSchoolName,CEEBCode,GPA,SAT,ACT,HighSchoolTranscriptPath,PreferredMajor,PreferredMinor,InterestedInHonors,ChurchName,ChurchAddress,ChurchCity,ChurchState,ChurchZip,PastorName,PastorEmail,ProfessionOfFaith,SpiritualJourney,PolicyHolder,ProviderName,MemberID,PolicyGroupNumber,InsuranceCardFrontPath,InsuranceCardBackPath,ImmunizationFilePath,PhysicianName,PracticeName,PracticePhoneNumber,ContactFirstName,ContactLastName,ContactEmailAddress,ContactPhoneNumber,ContactRelationship,ReferenceFirstName,ReferenceLastName,ReferenceRelationship,ReferenceEmailAddress,ReferencePhoneNumber,CreditCardNumber,BillingExpiration,BillingCVV,BillingName,BillingAddress,BillingCity,BillingState,BillingZip,Signature")] Application application)
+        public async Task<IActionResult> Edit(int id, Application application)
         {
             if (id != application.ApplicationID)
             {

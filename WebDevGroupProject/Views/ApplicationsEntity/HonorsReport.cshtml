@@ -13,31 +13,49 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantID)
+                <sortable-link asp-action="HonorsReport" query-options="ViewBag.QueryOptions" sort-field="ApplicantID">
+                    @Html.DisplayNameFor(model => model.ApplicantID)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GPA)
+                <sortable-link asp-action="HonorsReport" query-options="ViewBag.QueryOptions" sort-field="GPA">
+                    @Html.DisplayNameFor(model => model.GPA)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SAT)
+                <sortable-link asp-action="HonorsReport" query-options="ViewBag.QueryOptions" sort-field="SAT">
+                    @Html.DisplayNameFor(model => model.SAT)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ACT)
+                <sortable-link asp-action="HonorsReport" query-options="ViewBag.QueryOptions" sort-field="ACT">
+                    @Html.DisplayNameFor(model => model.ACT)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantFirstName)
+                <sortable-link asp-action="HonorsReport" query-options="ViewBag.QueryOptions" sort-field="ApplicantFirstName">
+                    @Html.DisplayNameFor(model => model.ApplicantFirstName)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantLastName)
+                <sortable-link asp-action="HonorsReport" query-options="ViewBag.QueryOptions" sort-field="ApplicantLastName">
+                    @Html.DisplayNameFor(model => model.ApplicantLastName)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantEmail)
+                <sortable-link asp-action="HonorsReport" query-options="ViewBag.QueryOptions" sort-field="ApplicantEmail">
+                    @Html.DisplayNameFor(model => model.ApplicantEmail)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantPhone)
+                <sortable-link asp-action="HonorsReport" query-options="ViewBag.QueryOptions" sort-field="ApplicantPhone">
+                    @Html.DisplayNameFor(model => model.ApplicantPhone)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.InterestedInHonors)
+                <sortable-link asp-action="HonorsReport" query-options="ViewBag.QueryOptions" sort-field="InterestedInHonors">
+                    @Html.DisplayNameFor(model => model.InterestedInHonors)
+                </sortable-link>
             </th>
             <th></th>
         </tr>

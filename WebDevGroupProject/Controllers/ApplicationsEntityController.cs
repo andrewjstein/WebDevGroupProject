@@ -48,7 +48,8 @@ namespace WebDevGroupProject.Controllers
         // GET: ApplicationsEntity/Create
         public IActionResult Create()
         {
-            return View();
+            var viewModel = new ApplicationViewModel(); 
+            return View(viewModel);
         }
 
         // POST: ApplicationsEntity/Create

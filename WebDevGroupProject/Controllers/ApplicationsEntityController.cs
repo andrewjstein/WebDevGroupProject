@@ -85,8 +85,38 @@ namespace WebDevGroupProject.Controllers
                 PreferredMajor = viewModel.EnrollmentPreferences.PreferredMajor,
                 PreferredMinor = viewModel.EnrollmentPreferences.PreferredMinor,
                 InterestedInHonors = viewModel.EnrollmentPreferences.InterestedInHonors,
+                // Residential Status 
+                // Student Type
 
-                
+                HighSchoolName = viewModel.AcademicRecord.HighSchoolName,
+                CEEBCode = viewModel.AcademicRecord.CEEBCode,
+                GPA = viewModel.AcademicRecord.GPA,
+                SAT = viewModel.AcademicRecord.SAT,
+                ACT = viewModel.AcademicRecord.ACT,
+                HighSchoolTranscriptPath = viewModel.AcademicRecord.HighSchoolTranscriptPath,
+                PastUniversities = viewModel.AcademicRecord.PastUniversities,
+
+                ChurchName = viewModel.SpiritualBackground.ChurchName,
+                ChurchAddress = viewModel.SpiritualBackground.ChurchAddress,
+                ChurchCity = viewModel.SpiritualBackground.ChurchCity,
+                ChurchState = viewModel.SpiritualBackground.ChurchState,
+                ChurchZip = viewModel.SpiritualBackground.ChurchZip,
+                PastorName = viewModel.SpiritualBackground.PastorName,
+                PastorEmail = viewModel.SpiritualBackground.PastorEmail,
+                ProfessionOfFaith = viewModel.SpiritualBackground.ProfessionOfFaith,
+                SpiritualJourney = viewModel.SpiritualBackground.SpiritualJourney,
+
+
+                CreditCardNumber = viewModel.Billing.CreditCardNumber,
+                BillingExpiration = viewModel.Billing.BillingExpiration, 
+                BillingCVV = viewModel.Billing.BillingCVV,
+                BillingName = viewModel.Billing.BillingName,
+                BillingAddress = viewModel.Billing.BillingAddress,
+                BillingCity = viewModel.Billing.BillingCity,
+                BillingState = viewModel.Billing.BillingState,
+                BillingZip = viewModel.Billing.BillingZip,
+                Signature = viewModel.Billing.Signature
+
 
 
 

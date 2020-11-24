@@ -32,7 +32,7 @@ namespace WebDevGroupProject.Models
 
         public string ApplicantPrimaryCitizenship { get; set; }
 
-        public EthnicOrigin EthnicOrigin { get; set; }
+        public string EthnicOrigin { get; set; }
         public bool HispanicLatino { get; set; }
     }
 }

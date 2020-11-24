@@ -1,6 +1,7 @@
 ﻿@model WebDevGroupProject.ViewModels.SpiritualBackgroundViewModel
 
 <div class="form-group">
+    <heading>Church Information</heading>
     <label asp-for="ChurchName" class="control-label"></label>
     <input asp-for="ChurchName" class="form-control" />
     <span asp-validation-for="ChurchName" class="text-danger"></span>
@@ -26,6 +27,7 @@
     <span asp-validation-for="ChurchZip" class="text-danger"></span>
 </div>
 <div class="form-group">
+    <heading>Pastor Information</heading>
     <label asp-for="PastorName" class="control-label"></label>
     <input asp-for="PastorName" class="form-control" />
     <span asp-validation-for="PastorName" class="text-danger"></span>

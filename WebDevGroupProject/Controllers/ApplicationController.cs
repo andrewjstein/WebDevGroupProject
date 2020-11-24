@@ -113,20 +113,20 @@ namespace WebDevGroupProject.Controllers
         [HttpGet]
         public IActionResult EnrollmentPreferences()
         {
-            var studenttype = new List<StudentType>()
-            {
-                new StudentType() {StudentTypeID = 1, Description = "Full Time"},
-                new StudentType() {StudentTypeID = 2, Description = "Part Time"}
-            };
-            var residentialstatus = new List<ResidentialStatus>()
-            {
-                new ResidentialStatus() {ResidentialStatusID = 1, Description = "Resident"},
-                new ResidentialStatus() {ResidentialStatusID = 2, Description = "Commuter"}
-            };
+            //var studenttype = new List<StudentType>()
+            //{
+            //    new StudentType() {StudentTypeID = 1, Description = "Full Time"},
+            //    new StudentType() {StudentTypeID = 2, Description = "Part Time"}
+            //};
+            //var residentialstatus = new List<ResidentialStatus>()
+            //{
+            //    new ResidentialStatus() {ResidentialStatusID = 1, Description = "Resident"},
+            //    new ResidentialStatus() {ResidentialStatusID = 2, Description = "Commuter"}
+            //};
+            //var viewModel = new EnrollmentPreferencesViewModel();
+            //viewModel.StudentType = new SelectList(studenttype, "StudentTypeID", "Description");
+            //viewModel.ResidentialStatus = new SelectList(residentialstatus, "ResidentialStatusID", "Description");
             var viewModel = new EnrollmentPreferencesViewModel();
-            viewModel.StudentType = new SelectList(studenttype, "StudentTypeID", "Description");
-            viewModel.ResidentialStatus = new SelectList(residentialstatus, "ResidentialStatusID", "Description");
-
             return View(viewModel);
         }
 

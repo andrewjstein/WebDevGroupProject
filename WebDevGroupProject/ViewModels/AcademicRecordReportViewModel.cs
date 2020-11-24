@@ -11,11 +11,12 @@ namespace WebDevGroupProject.ViewModels
 
         [Key]
         public int AcademicRecordId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string ApplicantFirstName { get; set; }
+        public string ApplicantLastName { get; set; }
         public double GPA { get; set; }
         public double SAT { get; set; }
         public double ACT { get; set; }
+
 
     }
 }

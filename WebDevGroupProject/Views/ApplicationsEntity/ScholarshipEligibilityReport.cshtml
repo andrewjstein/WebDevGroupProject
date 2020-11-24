@@ -14,12 +14,12 @@
         <tr>
             <th>
                 @*<sortable-link asp-action="ScholarshipEligibilityReport" query-options="ViewBag.QueryOptions" sort-field="FirstName">*@
-                @Html.DisplayNameFor(model => model.FirstName)
+                @Html.DisplayNameFor(model => model.ApplicantFirstName)
                 @*</sortable-link>*@
             </th>
             <th>
                 @*<sortable-link asp-action="ScholarshipEligibilityReport" query-options="ViewBag.QueryOptions" sort-field="LastName">*@
-                @Html.DisplayNameFor(model => model.LastName)
+                @Html.DisplayNameFor(model => model.ApplicantLastName)
                 @*</sortable-link>*@
             </th>
             <th>
@@ -44,10 +44,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
+                @Html.DisplayFor(modelItem => item.ApplicantFirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LastName)
+                @Html.DisplayFor(modelItem => item.ApplicantLastName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.GPA)
@@ -58,11 +58,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ACT)
             </td>
-            <td>
+            @*<td>
                 <a asp-action="Edit" asp-route-id="@item.AcademicRecordId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.AcademicRecordId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.AcademicRecordId">Delete</a>
-            </td>
+            </td>*@
         </tr>
 }
     </tbody>

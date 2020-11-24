@@ -310,6 +310,30 @@ namespace WebDevGroupProject.Controllers
             return View(await viewModel.OrderBy(queryOptions.Sort).ToListAsync());
         }
 
+        public async Task<IActionResult> ScholarshipEligibilityReport(QueryOptions queryOptions)
+        {
+            if (queryOptions == null || string.IsNullOrWhiteSpace(queryOptions.SortField))
+            {
+                queryOptions = new QueryOptions
+                {
+                    SortField = "ApplicantLastName",
+                    SortOrder = SortOrder.ASC
+                };
+            }
+            ViewBag.QueryOptions = queryOptions;
+            var viewModel = from items in _context.Application.Include(o => o.Applicant)
+                            select new AcademicRecordReportViewModel
+                            {
+                               
+                                ApplicantFirstName = items.Applicant.ApplicantFirstName,
+                                ApplicantLastName = items.Applicant.ApplicantLastName,
+                                GPA = items.GPA,
+                                SAT = items.SAT,
+                                ACT = items.ACT,
+                                
+                            };
+            return View(await viewModel.OrderBy(queryOptions.Sort).ToListAsync());
+        }
 
     }
 }

@@ -28,9 +28,9 @@ namespace WebDevGroupProject.ViewModels
         public ResidentialStatus ResidentialStatusID { get; set; }
         [Required]
         [Display(Name = "Full time or part time?")]
-        public SelectList StudentType { get; set; }
+        public string StudentType { get; set; }
         [Required]
         [Display(Name = "Resident or Commuter?")] 
-        public SelectList ResidentialStatus { get; set; }
+        public string ResidentialStatus { get; set; }
     }
 }

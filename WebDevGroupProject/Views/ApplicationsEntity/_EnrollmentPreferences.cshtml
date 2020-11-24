@@ -12,17 +12,13 @@
 </div>
 <div>
     <label asp-for="StudentType" class="control-label"></label>
+    <input asp-for="StudentType" class="form-control" />
     <span asp-validation-for="StudentType" class="text-danger"></span>
-    <select asp-for="StudentTypeID" asp-items="Model.StudentType">
-        <option value="">--Select an Answer--</option>
-    </select>
 </div>
 <div>
     <label asp-for="ResidentialStatus" class="control-label"></label>
+    <input asp-for="ResidentialStatus" class="form-control" />
     <span asp-validation-for="ResidentialStatus" class="text-danger"></span>
-    <select asp-for="ResidentialStatusID" asp-items="Model.ResidentialStatus">
-        <option value="">--Select an Answer--</option>
-    </select>
 </div>
 <div class="form-group form-check">
     <label class="form-check-label">

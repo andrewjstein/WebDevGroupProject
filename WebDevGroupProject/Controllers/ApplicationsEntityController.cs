@@ -73,37 +73,37 @@ namespace WebDevGroupProject.Controllers
                 EthnicOrigin = viewModel.Applicant.EthnicOrigin, 
                 HispanicLatino = viewModel.Applicant.HispanicLatino,
 
-            }; 
+            };
             var application = new Application()
             {
-                ReferenceFirstName = viewModel.Reference.ReferenceFirstName, 
-                ReferenceLastName = viewModel.Reference.ReferenceLastName, 
-                ReferenceRelationship = viewModel.Reference.ReferenceRelationship, 
-                ReferenceEmailAddress = viewModel.Reference.ReferenceEmailAddress, 
-                ReferencePhoneNumber = viewModel.Reference.ReferencePhoneNumber, 
+                ReferenceFirstName = viewModel.Reference.ReferenceFirstName,
+                ReferenceLastName = viewModel.Reference.ReferenceLastName,
+                ReferenceRelationship = viewModel.Reference.ReferenceRelationship,
+                ReferenceEmailAddress = viewModel.Reference.ReferenceEmailAddress,
+                ReferencePhoneNumber = viewModel.Reference.ReferencePhoneNumber,
 
-                PolicyHolder = viewModel.HealthRecord.PolicyHolder, 
-                ProviderName = viewModel.HealthRecord.ProviderName, 
-                MemberID = viewModel.HealthRecord.MemberID, 
-                PolicyGroupNumber = viewModel.HealthRecord.PolicyGroupNumber, 
-                InsuranceCardFrontPath = viewModel.HealthRecord.InsuranceCardFrontPath, 
-                InsuranceCardBackPath = viewModel.HealthRecord.InsuranceCardBackPath, 
-                ImmunizationFilePath = viewModel.HealthRecord.ImmunizationFilePath, 
-                PhysicianName = viewModel.HealthRecord.PhysicianName, 
-                PracticeName = viewModel.HealthRecord.PracticeName, 
-                PracticePhoneNumber = viewModel.HealthRecord.PracticePhoneNumber, 
-                ContactFirstName = viewModel.HealthRecord.ContactFirstName, 
-                ContactLastName = viewModel.HealthRecord.ContactLastName, 
-                ContactEmailAddress = viewModel.HealthRecord.ContactEmailAddress, 
-                ContactPhoneNumber = viewModel.HealthRecord.ContactPhoneNumber, 
+                PolicyHolder = viewModel.HealthRecord.PolicyHolder,
+                ProviderName = viewModel.HealthRecord.ProviderName,
+                MemberID = viewModel.HealthRecord.MemberID,
+                PolicyGroupNumber = viewModel.HealthRecord.PolicyGroupNumber,
+                InsuranceCardFrontPath = viewModel.HealthRecord.InsuranceCardFrontPath,
+                InsuranceCardBackPath = viewModel.HealthRecord.InsuranceCardBackPath,
+                ImmunizationFilePath = viewModel.HealthRecord.ImmunizationFilePath,
+                PhysicianName = viewModel.HealthRecord.PhysicianName,
+                PracticeName = viewModel.HealthRecord.PracticeName,
+                PracticePhoneNumber = viewModel.HealthRecord.PracticePhoneNumber,
+                ContactFirstName = viewModel.HealthRecord.ContactFirstName,
+                ContactLastName = viewModel.HealthRecord.ContactLastName,
+                ContactEmailAddress = viewModel.HealthRecord.ContactEmailAddress,
+                ContactPhoneNumber = viewModel.HealthRecord.ContactPhoneNumber,
                 ContactRelationship = viewModel.HealthRecord.ContactRelationship,
 
                 PreferredMajor = viewModel.EnrollmentPreferences.PreferredMajor,
                 PreferredMinor = viewModel.EnrollmentPreferences.PreferredMinor,
                 InterestedInHonors = viewModel.EnrollmentPreferences.InterestedInHonors,
-                ResidentialStatus = viewModel.EnrollmentPreferences.ResidentialStatus, 
+                ResidentialStatus = viewModel.EnrollmentPreferences.ResidentialStatus,
                 StudentType = viewModel.EnrollmentPreferences.StudentType,
-                
+
 
                 HighSchoolName = viewModel.AcademicRecord.HighSchoolName,
                 CEEBCode = viewModel.AcademicRecord.CEEBCode,
@@ -125,35 +125,29 @@ namespace WebDevGroupProject.Controllers
 
 
                 CreditCardNumber = viewModel.Billing.CreditCardNumber,
-                BillingExpiration = viewModel.Billing.BillingExpiration, 
+                BillingExpiration = viewModel.Billing.BillingExpiration,
                 BillingCVV = viewModel.Billing.BillingCVV,
                 BillingName = viewModel.Billing.BillingName,
                 BillingAddress = viewModel.Billing.BillingAddress,
                 BillingCity = viewModel.Billing.BillingCity,
                 BillingState = viewModel.Billing.BillingState,
                 BillingZip = viewModel.Billing.BillingZip,
-                Signature = viewModel.Billing.Signature
+                Signature = viewModel.Billing.Signature,
 
+                Applicant = applicant
 
             };
 
 
             if (ModelState.IsValid)
             {
+                _context.Add(applicant);
                 _context.Add(application);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(application);
         }
-
-
-
-
-
-
-
-
 
 
 

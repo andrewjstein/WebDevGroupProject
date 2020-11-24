@@ -16,8 +16,7 @@ namespace WebDevGroupProject.ViewModels
         [Required]
         [Display(Name = "Sibling Names (Separated by Comma)")]
         public string Siblings { get; set; }
-        public FamilyRole FamilyRoleID { get; set; }
         [Required]
-        public SelectList FamilyRole { get; set; }
+        public string FamilyRole { get; set; }
     }
 }

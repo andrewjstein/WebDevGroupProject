@@ -57,7 +57,23 @@ namespace WebDevGroupProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ApplicationViewModel viewModel)
         {
+            var applicant = new Applicant()
+            {
+                ApplicantFirstName = viewModel.Applicant.ApplicantFirstName,
+                ApplicantLastName = viewModel.Applicant.ApplicantLastName,
+                ApplicantMiddleInitial = viewModel.Applicant.ApplicantMiddleInitial,
+                ApplicantStreetAddress = viewModel.Applicant.ApplicantStreetAddress,
+                ApplicantCity = viewModel.Applicant.ApplicantCity,
+                ApplicantCountry = viewModel.Applicant.ApplicantCountry,
+                ApplicantZip = viewModel.Applicant.ApplicantZip,
+                ApplicantPhone = viewModel.Applicant.ApplicantPhone,
+                ApplicantEmail = viewModel.Applicant.ApplicantEmail,
+                ApplicantBirthDate = viewModel.Applicant.ApplicantBirthDate,
+                ApplicantPrimaryCitizenship = viewModel.Applicant.ApplicantPrimaryCitizenship,
+                EthnicOrigin = viewModel.Applicant.EthnicOrigin, 
+                HispanicLatino = viewModel.Applicant.HispanicLatino,
 
+            }; 
             var application = new Application()
             {
                 ReferenceFirstName = viewModel.Reference.ReferenceFirstName, 
@@ -109,7 +125,7 @@ namespace WebDevGroupProject.Controllers
 
 
                 CreditCardNumber = viewModel.Billing.CreditCardNumber,
-                BillingExpiration = viewModel.Billing.BillingExpiration, 
+                // BillingExpiration = viewModel.Billing.BillingExpiration, 
                 BillingCVV = viewModel.Billing.BillingCVV,
                 BillingName = viewModel.Billing.BillingName,
                 BillingAddress = viewModel.Billing.BillingAddress,
@@ -117,9 +133,6 @@ namespace WebDevGroupProject.Controllers
                 BillingState = viewModel.Billing.BillingState,
                 BillingZip = viewModel.Billing.BillingZip,
                 Signature = viewModel.Billing.Signature
-
-
-
 
 
             };

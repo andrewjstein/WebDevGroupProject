@@ -24,8 +24,8 @@ namespace WebDevGroupProject.ViewModels
         [Required]
         [Display(Name = "Interested in honors?")]
         public bool InterestedInHonors { get; set; }
-        public StudentType StudentTypeID { get; set; }
-        public ResidentialStatus ResidentialStatusID { get; set; }
+        //public StudentType StudentTypeID { get; set; }
+        //public ResidentialStatus ResidentialStatusID { get; set; }
         [Required]
         [Display(Name = "Full time or part time?")]
         public string StudentType { get; set; }

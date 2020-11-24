@@ -1,10 +1,10 @@
-﻿@model IEnumerable<WebDevGroupProject.ViewModels.ScholarshipEligibilityReportViewModel>
+﻿@model IEnumerable<WebDevGroupProject.ViewModels.AcademicRecordReportViewModel>
 
 @{
     ViewData["Title"] = "ScholarshipEligibilityReport";
 }
 
-<h1>ScholarshipEligibilityReport</h1>
+<h1>Scholarship Eligibility Report</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,25 +13,29 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantID)
+                @*<sortable-link asp-action="ScholarshipEligibilityReport" query-options="ViewBag.QueryOptions" sort-field="FirstName">*@
+                @Html.DisplayNameFor(model => model.FirstName)
+                @*</sortable-link>*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantFirstName)
+                @*<sortable-link asp-action="ScholarshipEligibilityReport" query-options="ViewBag.QueryOptions" sort-field="LastName">*@
+                @Html.DisplayNameFor(model => model.LastName)
+                @*</sortable-link>*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantLastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ApplicantMiddleInitial)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ApplicantEmail)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ApplicantPhone)
-            </th>
-            <th>
+                @*<sortable-link asp-action="ScholarshipEligibilityReport" query-options="ViewBag.QueryOptions" sort-field="GPA">*@
                 @Html.DisplayNameFor(model => model.GPA)
+                @*</sortable-link>*@
+            </th>
+            <th>
+                @*<sortable-link asp-action="ScholarshipEligibilityReport" query-options="ViewBag.QueryOptions" sort-field="SAT">*@
+                @Html.DisplayNameFor(model => model.SAT)
+                @*</sortable-link>*@
+            </th>
+            <th>
+                @*<sortable-link asp-action="ScholarshipEligibilityReport" query-options="ViewBag.QueryOptions" sort-field="ACT">*@
+                @Html.DisplayNameFor(model => model.ACT)
+                @*</sortable-link>*@
             </th>
             <th></th>
         </tr>
@@ -40,30 +44,24 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ApplicantID)
+                @Html.DisplayFor(modelItem => item.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ApplicantFirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApplicantLastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApplicantMiddleInitial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApplicantEmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApplicantPhone)
+                @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.GPA)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.DisplayFor(modelItem => item.SAT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ACT)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AcademicRecordId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AcademicRecordId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AcademicRecordId">Delete</a>
             </td>
         </tr>
 }

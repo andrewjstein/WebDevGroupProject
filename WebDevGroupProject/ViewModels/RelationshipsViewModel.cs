@@ -11,7 +11,7 @@ namespace WebDevGroupProject.ViewModels
     public class RelationshipsViewModel
     {
         [Required]
-        [Display(Name="Guardian Names(Separated by Comma)")]
+        [Display(Name="Guardian Names (Separated by Comma)")]
         public string Guardians { get; set; }
         [Required]
         [Display(Name = "Sibling Names (Separated by Comma)")]

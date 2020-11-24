@@ -15,7 +15,7 @@ namespace WebDevGroupProject.ViewModels
         public int CreditCardNumber { get; set; }
         [Required]
         [Display(Name = "Expiration Date")]
-        public DateTime BillingExpiration { get; set; }
+        public string BillingExpiration { get; set; }
         [Required]
         [MaxLength(4)]
         [Display(Name = "CVV Number")]

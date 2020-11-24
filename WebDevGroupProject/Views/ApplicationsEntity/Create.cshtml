@@ -2,7 +2,16 @@
 
 @{
     ViewData["Title"] = "Create";
-    ViewDataDictionary viewData = new ViewDataDictionary(Html.ViewData);
+    ViewDataDictionary viewDataApplicant = new ViewDataDictionary(Html.ViewData);
+    ViewDataDictionary viewDataAR = new ViewDataDictionary(Html.ViewData);
+    ViewDataDictionary viewDataEnroll = new ViewDataDictionary(Html.ViewData);
+    ViewDataDictionary viewDataSB = new ViewDataDictionary(Html.ViewData);
+    ViewDataDictionary viewDataHR = new ViewDataDictionary(Html.ViewData);
+    ViewDataDictionary viewDataReference = new ViewDataDictionary(Html.ViewData); 
+    ViewDataDictionary viewDataRelate = new ViewDataDictionary(Html.ViewData);
+    ViewDataDictionary viewDataBilling = new ViewDataDictionary(Html.ViewData);
+
+
 }
 
 <h1>Application</h1>
@@ -21,51 +30,51 @@
 
             @*Applicant*@
             @{
-                ViewData.TemplateInfo.HtmlFieldPrefix = $"Applicant";
-                <partial name="_Applicant" model="Model.Applicant" view-data="viewData" />
+                viewDataApplicant.TemplateInfo.HtmlFieldPrefix = $"Applicant";
+                <partial name="_Applicant" model="Model.Applicant" view-data="viewDataApplicant" />
             }
 
-            @*Academic Record*@
+            Academic Record
             @{
-                ViewData.TemplateInfo.HtmlFieldPrefix = $"AcademicRecord";
-                <partial name="_AcademicRecord" model="Model.AcademicRecord" view-data="viewData" />
+                viewDataAR.TemplateInfo.HtmlFieldPrefix = $"AcademicRecord";
+                <partial name="_AcademicRecord" model="Model.AcademicRecord" view-data="viewDataAR" />
             }
 
-            @*Enrollment Preferences*@
+            Enrollment Preferences
             @{
-                ViewData.TemplateInfo.HtmlFieldPrefix = $"EnrollmentPreferences";
-                <partial name="_EnrollmentPreferences" model="Model.EnrollmentPreferences" view-data="viewData" />
+                viewDataEnroll.TemplateInfo.HtmlFieldPrefix = $"EnrollmentPreferences";
+                <partial name="_EnrollmentPreferences" model="Model.EnrollmentPreferences" view-data="viewDataEnroll" />
             }
 
-            @*Spiritual Background*@
+            Spiritual Background
             @{
-                ViewData.TemplateInfo.HtmlFieldPrefix = $"SpiritualBackground";
-                <partial name="_SpiritualBackground" model="Model.SpiritualBackground" view-data="viewData" />
+                viewDataSB.TemplateInfo.HtmlFieldPrefix = $"SpiritualBackground";
+                <partial name="_SpiritualBackground" model="Model.SpiritualBackground" view-data="viewDataSB" />
             }
 
-            @*Health Record*@
+            Health Record
             @{
-                ViewData.TemplateInfo.HtmlFieldPrefix = $"HealthRecord";
-                <partial name="_HealthRecord" model="Model.HealthRecord" view-data="viewData" />
+                viewDataHR.TemplateInfo.HtmlFieldPrefix = $"HealthRecord";
+                <partial name="_HealthRecord" model="Model.HealthRecord" view-data="viewDataHR" />
             }
 
-            @*Relationships*@
+            Relationships
             @{
-                ViewData.TemplateInfo.HtmlFieldPrefix = $"Relationship";
-                <partial name="_Relationship" model="Model.Relationship" view-data="viewData" />
+                viewDataRelate.TemplateInfo.HtmlFieldPrefix = $"Relationship";
+                <partial name="_Relationship" model="Model.Relationship" view-data="viewDataRelate" />
             }
 
 
-            @*Reference*@
+            Reference
             @{
-                ViewData.TemplateInfo.HtmlFieldPrefix = $"Reference";
-                <partial name="_Reference" model="Model.Reference" view-data="viewData" />
+                viewDataReference.TemplateInfo.HtmlFieldPrefix = $"Reference";
+                <partial name="_Reference" model="Model.Reference" view-data="viewDataReference" />
             }
 
-            @*Billing*@
+            Billing
             @{
-                ViewData.TemplateInfo.HtmlFieldPrefix = $"Billing";
-                <partial name="_Billing" model="Model.Billing" view-data="viewData" />
+                viewDataBilling.TemplateInfo.HtmlFieldPrefix = $"Billing";
+                <partial name="_Billing" model="Model.Billing" view-data="viewDataBilling" />
             }
 
             <div class="form-group">

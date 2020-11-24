@@ -57,12 +57,41 @@ namespace WebDevGroupProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ApplicationViewModel viewModel)
         {
-            Reference = viewModel.Reference;
+
             var application = new Application()
             {
-                Reference = viewModel.Reference, 
+                ReferenceFirstName = viewModel.Reference.ReferenceFirstName, 
+                ReferenceLastName = viewModel.Reference.ReferenceLastName, 
+                ReferenceRelationship = viewModel.Reference.ReferenceRelationship, 
+                ReferenceEmailAddress = viewModel.Reference.ReferenceEmailAddress, 
+                ReferencePhoneNumber = viewModel.Reference.ReferencePhoneNumber, 
 
-            }
+                PolicyHolder = viewModel.HealthRecord.PolicyHolder, 
+                ProviderName = viewModel.HealthRecord.ProviderName, 
+                MemberID = viewModel.HealthRecord.MemberID, 
+                PolicyGroupNumber = viewModel.HealthRecord.PolicyGroupNumber, 
+                InsuranceCardFrontPath = viewModel.HealthRecord.InsuranceCardFrontPath, 
+                InsuranceCardBackPath = viewModel.HealthRecord.InsuranceCardBackPath, 
+                ImmunizationFilePath = viewModel.HealthRecord.ImmunizationFilePath, 
+                PhysicianName = viewModel.HealthRecord.PhysicianName, 
+                PracticeName = viewModel.HealthRecord.PracticeName, 
+                PracticePhoneNumber = viewModel.HealthRecord.PracticePhoneNumber, 
+                ContactFirstName = viewModel.HealthRecord.ContactFirstName, 
+                ContactLastName = viewModel.HealthRecord.ContactLastName, 
+                ContactEmailAddress = viewModel.HealthRecord.ContactEmailAddress, 
+                ContactPhoneNumber = viewModel.HealthRecord.ContactPhoneNumber, 
+                ContactRelationship = viewModel.HealthRecord.ContactRelationship,
+
+                PreferredMajor = viewModel.EnrollmentPreferences.PreferredMajor,
+                PreferredMinor = viewModel.EnrollmentPreferences.PreferredMinor,
+                InterestedInHonors = viewModel.EnrollmentPreferences.InterestedInHonors,
+
+                
+
+
+
+
+            };
 
 
             if (ModelState.IsValid)
@@ -73,6 +102,17 @@ namespace WebDevGroupProject.Controllers
             }
             return View(application);
         }
+
+
+
+
+
+
+
+
+
+
+
 
         // GET: ApplicationsEntity/Edit/5
         public async Task<IActionResult> Edit(int? id)

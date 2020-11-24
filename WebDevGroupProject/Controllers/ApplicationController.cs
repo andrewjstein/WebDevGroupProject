@@ -88,18 +88,20 @@ namespace WebDevGroupProject.Controllers
         [HttpGet]
         public IActionResult Applicant()
         {
-            var ethnicorigin = new List<EthnicOrigin>()
-            {
-                new EthnicOrigin() {EthnicOriginID = 1, Description = "American Indian or Alaska Native"},
-                new EthnicOrigin() {EthnicOriginID = 2, Description = "Asian"},
-                new EthnicOrigin() {EthnicOriginID = 3, Description = "Black or African American"},
-                new EthnicOrigin() {EthnicOriginID = 4, Description = "Middle Eastern"},
-                new EthnicOrigin() {EthnicOriginID = 5, Description = "Native Hawaiian or Other Pacific"},
-                new EthnicOrigin() {EthnicOriginID = 6, Description = "White"},
-            };
-            var viewModel = new ApplicantViewModel();
-            viewModel.EthnicOrigin = new SelectList(ethnicorigin, "EthnicOriginID", "Description");
+            //var ethnicorigin = new List<EthnicOrigin>()
+            //{
+            //    new EthnicOrigin() {EthnicOriginID = 1, Description = "American Indian or Alaska Native"},
+            //    new EthnicOrigin() {EthnicOriginID = 2, Description = "Asian"},
+            //    new EthnicOrigin() {EthnicOriginID = 3, Description = "Black or African American"},
+            //    new EthnicOrigin() {EthnicOriginID = 4, Description = "Middle Eastern"},
+            //    new EthnicOrigin() {EthnicOriginID = 5, Description = "Native Hawaiian or Other Pacific"},
+            //    new EthnicOrigin() {EthnicOriginID = 6, Description = "White"},
+            //};
+            //var viewModel = new ApplicantViewModel();
+            //viewModel.EthnicOrigin = new SelectList(ethnicorigin, "EthnicOriginID", "Description");
 
+            //return View(viewModel);
+            var viewModel = new ApplicantViewModel();
             return View(viewModel);
         }
 

@@ -48,7 +48,7 @@ namespace WebDevGroupProject.ViewModels
         public EthnicOrigin EthnicOriginID { get; set; }
         [Required]
         [Display(Name = "Ethnic Origin")]
-        public SelectList EthnicOrigin { get; set; }
+        public string EthnicOrigin { get; set; }
         [Required]
         [Display(Name = "Hispanic or Latino?")]
         public bool HispanicLatino { get; set; }

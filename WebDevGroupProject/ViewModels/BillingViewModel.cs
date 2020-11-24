@@ -14,6 +14,7 @@ namespace WebDevGroupProject.ViewModels
         [Display(Name = "Credit Card Number")]
         public int CreditCardNumber { get; set; }
         [Required]
+        [MaxLength(5)]
         [Display(Name = "Expiration Date")]
         public string BillingExpiration { get; set; }
         [Required]

@@ -1,5 +1,5 @@
 ﻿@model WebDevGroupProject.ViewModels.BillingViewModel
-
+<heading>Billing Information</heading>
 <div class="form-group">
     <label asp-for="CreditCardNumber" class="control-label"></label>
     <input asp-for="CreditCardNumber" class="form-control" />
@@ -40,6 +40,7 @@
     <input asp-for="BillingZip" class="form-control" />
     <span asp-validation-for="BillingZip" class="text-danger"></span>
 </div>
+<heading>Signature</heading>
 <div class="form-group">
     <label asp-for="Signature" class="control-label"></label>
     <input asp-for="Signature" class="form-control" />

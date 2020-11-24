@@ -38,7 +38,7 @@ namespace WebDevGroupProject.ViewModels
         [Display(Name = "Zipcode")]
         public string BillingZip { get; set; }
         [Required]
-        [Display(Name = "Signature")]
+        [Display(Name = "")]
         public string Signature { get; set; }
     }
 }

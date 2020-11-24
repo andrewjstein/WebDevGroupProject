@@ -13,29 +13,45 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantID)
+                <sortable-link asp-action="ReferenceReport" query-options="ViewBag.QueryOptions" sort-field="ApplicantID">
+                    @Html.DisplayNameFor(model => model.ApplicantID)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantFirstName)
+                <sortable-link asp-action="ReferenceReport" query-options="ViewBag.QueryOptions" sort-field="ApplicantFirstName">
+                    @Html.DisplayNameFor(model => model.ApplicantFirstName)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicantLastName)
+                <sortable-link asp-action="ReferenceReport" query-options="ViewBag.QueryOptions" sort-field="ApplicantLastName">
+                    @Html.DisplayNameFor(model => model.ApplicantLastName)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReferenceFirstName)
+                <sortable-link asp-action="ReferenceReport" query-options="ViewBag.QueryOptions" sort-field="ReferenceFirstName">
+                    @Html.DisplayNameFor(model => model.ReferenceFirstName)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReferenceLastName)
+                <sortable-link asp-action="ReferenceReport" query-options="ViewBag.QueryOptions" sort-field="ReferenceLastName">
+                    @Html.DisplayNameFor(model => model.ReferenceLastName)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReferenceRelationship)
+                <sortable-link asp-action="ReferenceReport" query-options="ViewBag.QueryOptions" sort-field="ReferenceRelationship">
+                    @Html.DisplayNameFor(model => model.ReferenceRelationship)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReferenceEmailAddress)
+                <sortable-link asp-action="ReferenceReport" query-options="ViewBag.QueryOptions" sort-field="ReferenceEmailAddress">
+                    @Html.DisplayNameFor(model => model.ReferenceEmailAddress)
+                </sortable-link>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReferencePhoneNumber)
-            </th>
+                <sortable-link asp-action="ReferenceReport" query-options="ViewBag.QueryOptions" sort-field="ReferencePhoneNumber">
+                    @Html.DisplayNameFor(model => model.ReferencePhoneNumber)
+                </sortable-link>
+</th>
             <th></th>
         </tr>
     </thead>

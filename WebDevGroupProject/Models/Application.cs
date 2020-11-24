@@ -29,8 +29,8 @@ namespace WebDevGroupProject.Models
         //public string CommuterResident { get; set; }
         //public string FullTimePartTime { get; set; }
         public bool InterestedInHonors { get; set; }
-        public StudentType StudentType { get; set; }
-        public ResidentialStatus ResidentialStatus { get; set; }
+        public string StudentType { get; set; }
+        public string ResidentialStatus { get; set; }
 
         // Relationships 
         public List<Guardian> Guardians { get; set; }

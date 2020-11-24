@@ -85,8 +85,9 @@ namespace WebDevGroupProject.Controllers
                 PreferredMajor = viewModel.EnrollmentPreferences.PreferredMajor,
                 PreferredMinor = viewModel.EnrollmentPreferences.PreferredMinor,
                 InterestedInHonors = viewModel.EnrollmentPreferences.InterestedInHonors,
-                // Residential Status 
-                // Student Type
+                ResidentialStatus = viewModel.EnrollmentPreferences.ResidentialStatus, 
+                StudentType = viewModel.EnrollmentPreferences.StudentType,
+                
 
                 HighSchoolName = viewModel.AcademicRecord.HighSchoolName,
                 CEEBCode = viewModel.AcademicRecord.CEEBCode,
